@@ -1,0 +1,159 @@
+Let's make a game!
+	name:Sci-Fi Template
+	by:Kasperja
+	desc:Write the game description here.<//>Click to play the game!
+	created:18/03/2025
+	updated:18/03/2025
+	version:1.0
+
+Settings
+	background:https://raw.githubusercontent.com/kasperja/GUI/refs/heads/main/tp.png
+	building cost increase:110%
+	building cost refund:50%
+	spritesheet:icons, 48 by 48, https://raw.githubusercontent.com/kasperja/SSM/main/SpriteCrystalsEC2.png
+	stylesheet:https://pastebin.com/raw/5s861Z2j
+	no particles
+	no bulk particles
+
+Layout
+	
+*main
+  contains:buttons, log, logHeader
+*res
+	icons:show
+    contains:Resources
+    class:fullWidth
+*buttons
+    contains:Buttons
+	tooltip origin:left
+*store
+  contains:buildings, upgrades, buildingsHeader, upgradesHeader, buildings2, upgrades2, buildings2Header, upgrades2Header
+*buildings
+	icons:hide
+    contains:Buildings
+    tooltip origin:right
+*buildingsHeader
+	header:Units
+*buildings2
+	icons:hide
+    contains:tag:buildings2
+    tooltip origin:left
+*buildings2Header
+	header:Generators
+*upgrades
+	tooltip origin:left
+    contains:Upgrades
+    costs:show
+    names:show
+	icons:hide
+*upgradesHeader
+	header:Upgrades
+*upgrades2
+	tooltip origin:right
+    contains:tag:upgrades2
+    costs:show
+    names:show
+	icons:hide
+*upgrades2Header
+	header:Upgrades II
+*log
+	contains:Log
+	class:log
+*logHeader
+	header:Log
+
+
+		
+Buttons
+	*creditButton
+		name:Button Name
+		desc:Press the button to earn Credits.
+		on click:anim icon wobble
+		on click:yield 1 credit
+		on click:yield 1 credit
+		on start:log Welcome to </#></><t>Sci-Fi Template</#> <//> Game version: 1.0</#>
+		on load:log Welcome to </#></><t>Sci-Fi Template</#> <//> Game version: 1.0</#>
+		on load:log Game loaded.
+		icon:https://github.com/kasperja/GUI/raw/main/ButtonTest2.png
+		no text
+		class:bigButton
+		icon class:shadowed
+		tooltip origin:bottom
+		tooltip class:red
+		
+Resources
+	*credit|credits
+		name:Credits|Credits
+		desc:This is your Credits, click and upgrade to earn Credits.
+		class:noBackground
+		show earned
+	
+		
+		
+Shinies
+	
+
+Buildings
+	
+	*TEMPLATE
+			
+	*drone|drones
+		name:Mining Drone|Mining Drones
+		desc:A tiny asteroid mining drone.<//><b>Effect:</b><.>Produces 1 Credits every 10 seconds.
+		icon:icons[10,12]
+		cost:30 credits
+		on tick:yield 0.1 credit
+		req:20 credits:earned
+
+	
+
+//Buildings2 / Generators
+
+	*drone2|drones2
+		name:Mining Drone II|Mining Drones II
+		desc:A tiny asteroid mining drone.<//><b>Effect:</b><.>Produces 1 Credits every 10 seconds.
+		icon:icons[10,12]
+		cost:30 credits
+		on tick:yield 0.1 credit
+		req:20 credits:earned
+		tag: buildings2
+		
+
+Upgrades
+	*TEMPLATE
+
+	*parsley
+		name:Mining Drone Tech
+		desc:Powers up the efficiency of the Mining Drones.<//><b>Effect:</b><.>+1 Credits/click<.>Mining Drone production x2
+		cost:200 credits
+		passive:increase credit yield of creditButton by 1
+		passive:multiply yield of drone by 2
+		req:200 credits:earned
+	
+		
+//Upgrades2
+
+	*parsley2
+		name:Mining Drone Tech II
+		desc:Powers up the efficiency of the Mining Drones II.<//><b>Effect:</b><.>+1 Credits/click<.>Mining Drone II production x2
+		cost:300 credits
+		passive:increase credit yield of creditButton by 1
+		passive:multiply yield of drone2 by 2
+		req:300 credits:earned
+		tag: upgrades2
+
+Achievements
+	*TEMPLATE
+
+*Achiev1
+		name:Your First Achievement!
+		desc:Buy a Mining Drone.
+		req:(drones>=1)
+
+*Achiev2
+		name:Your Second Achievement!
+		desc:Have 2 Mining Drones.
+		req:(drones>=2)
+		
+CSS
+  
