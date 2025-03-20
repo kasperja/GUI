@@ -11,7 +11,7 @@ Settings
 	building cost increase:110%
 	building cost refund:50%
 	spritesheet:icons, 48 by 48, https://raw.githubusercontent.com/kasperja/SSM/main/SpriteCrystalsEC2.png
-	stylesheet:https://pastebin.com/raw/5s861Z2j
+	stylesheet:https://raw.githubusercontent.com/kasperja/GUI/refs/tags/igm/SciFi-Temp-CSS-yellow.txt
 	no particles
 	no bulk particles
 
