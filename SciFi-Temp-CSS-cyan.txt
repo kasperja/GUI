@@ -1,0 +1,500 @@
+#game
+  {
+    background:#151504;
+	background-size: cover;
+	font-family: DejaVu Sans Mono, monospace;
+	letter-spacing: 1px;
+	font-stretch: ultra-expanded
+    color:#00f6ff;
+  }
+
+
+.box
+{
+	text-align:left;
+	padding: 0px;
+	box-shadow:none;
+}
+#box-res.fullWidth
+{
+	text-align:center;
+	width:100%;
+	top:0%;
+	height:5%;
+	min-height:32px;
+	z-index:100;
+	position:absolute;
+	color:#00f6ff !important;
+}
+.box-header,.box-footer,.box-bit
+{
+	background:#00f6ff;
+	color:#151504;
+	
+}
+
+.box-header{
+	font-size: 20px;
+  	font-style: italic;
+	font-weight: 1000;
+	text-align: start;
+	padding-left: 20px;
+}
+.box-bit{border-radius:0px;}
+
+.box-header
+{
+	border-bottom-left-radius:0px;
+	border-bottom-right-radius:0px;
+	margin-bottom:0px;
+}
+.box-footer
+{
+	border-top-left-radius:0px;
+	border-top-right-radius:0px;
+	margin-top:4px;
+}
+
+
+#box-main
+{
+	left:0px;
+	top:0px;
+	bottom:0px;
+	overflow:hidden;
+	width:19%;
+	position:absolute;
+margin-bottom: 1%;
+	margin-left: 1%;
+	margin-right: 1%;
+}
+
+#box-buttons
+{
+	top:0px;
+	right:0px;
+	bottom:0px;
+	left:0px;
+	position:absolute;
+}
+#box-store
+{
+	right:0px;
+	top:32px;
+	bottom:0px;
+	width:80% !important;
+	position:absolute;
+	margin-bottom: 1%;
+	margin-left: 1%;
+	margin-right: 1%;
+}
+#box-buildings,#box-upgrades, #box-buildings2,#box-upgrades2
+{
+	top:0px;
+	bottom:0px;
+	width:49%;
+	right:0%;
+	overflow-x:hidden;
+	overflow-y:auto;
+	position:absolute;
+}
+#box-buildings, #box-upgrades2
+{right:51%;}
+
+#box-buildings, #box-upgrades
+{bottom: 52%;}
+
+
+
+
+
+
+.thing
+{
+	display:inline-block;
+	padding:0px;
+	margin:0px;
+	cursor:pointer;
+}
+.thing:hover,.thing.lit
+{
+	background:#00f6ff;
+}
+
+
+
+.upgrade.owned,.achiev.owned
+{
+	color:#00f6ff;
+	background:#00000000;
+}
+.thing-text,.thing-costs{
+
+font-weight:bold;
+font-size: 16px;
+
+}
+
+.building
+{
+	border-top-left-radius:0px;
+	border-bottom-left-radius:0px;
+	display:block;
+	margin-right:0px;
+	font-size:14px;
+}
+.building, .upgrade{
+padding-left: 4px;
+}
+
+
+.fullWidth
+{
+	display:block;
+	margin-left:0px;
+	margin-right:0px;
+	z-index:10;
+}
+#game .fullWidth
+{
+	height:auto;
+	min-height:auto;
+}
+
+.fullWidth:before,.fullWidth:after
+{
+	content:'';
+	height:1px;
+	position:absolute;
+	left:0px;
+	right:0px;
+	z-index:-1;
+}
+.fullWidth:before{top:-1px;}
+.fullWidth:after{bottom:-1px;}
+
+.fullWidth .thing-icon
+{
+	margin-top:0px;
+	margin-bottom:0px;
+}
+.fullWidth .thing-text
+{
+	margin-top:0px;
+	margin-bottom:0px;
+}
+
+
+
+#box-buildingsHeader{
+top: 0px;
+width:49%;
+left: 0%;
+position: absolute;
+height: 32px;
+
+
+
+
+}
+
+#box-upgradesHeader{
+top: 0px;
+width:49%;
+right: 0%;
+position: absolute;
+height: 32px;
+}
+
+#box-buildings2Header{
+top: 51%;
+width:49%;
+right: 0%;
+position: absolute;
+height: 32px;
+
+
+
+
+}
+
+#box-upgrades2Header{
+top: 51%;
+width:49%;
+left: 0%;
+position: absolute;
+height: 32px;
+}
+
+#box-logHeader{
+opacity: 1;
+position: absolute;
+top: 51%;
+width: 86%;
+left: 0px;
+height: 32px;
+margin-left: 2%;
+margin-right: 2%;
+}
+
+
+#box-buildingsHeader:before, #box-upgradesHeader:before, #box-buildings2Header:before, #box-upgrades2Header:before, #box-logHeader:before{
+
+height: 10px;
+
+
+	content: '';
+    position: absolute;
+    top: 0; left: 0;
+    border-top: 16px solid #151504;
+    border-right: 16px solid #00f6ff;
+    width: 0;
+}
+
+
+
+
+
+
+#box-buildings, #box-upgrades{
+top: 32px;
+border: thick solid #00f6ff;
+color:#00f6ff;
+}
+
+#box-buildings2, #box-upgrades2{
+top: 51%;
+margin-top: 32px;
+border: thick solid #00f6ff;
+color:#00f6ff;
+}
+
+.building:hover, .upgrade:hover{
+
+color: #151504;
+background: #00f6ff;
+
+}
+#bulkDisplay{
+position: absolute;
+left: 0%;
+top: 0px;
+}
+.upgrade{
+width:100%;
+
+}
+
+.thing-text, .thing-costs{
+
+padding: 8px;
+text-shadow: 0px 0px 0px #000;
+
+}.box{
+text-shadow: 0px 0px 0px #000;
+
+}
+
+#box-log{
+position: absolute !important;
+opacity: 1 !important;
+top: 51%;
+margin-top: 32px;
+left: 0% !important;
+bottom: 0%;
+width: 86% !important;
+background:#151504;
+color:#00f6ff;
+border: thick solid #00f6ff;
+
+	margin-left: 2%;
+	margin-right: 2%;
+}
+#logOuter{
+background:#151504;
+color:#00f6ff;
+
+
+}
+#logInner{
+display: flex;
+flex-direction: column;
+padding: 5%;
+background:#151504;
+color:#00f6ff;
+overflow:auto;
+}
+ 
+#box-things-Buttons{
+position: absolute;
+height: 50%;
+top: 0%;
+width: 100%;
+}
+
+.wobble {
+    animation: wobble 0.5s;
+    animation-duration: 0.5s;
+    transition: transform 1.00s ease-out;
+   
+}
+ 
+@keyframes wobble {
+0% {
+    opacity: 0.7;
+    transform: scale(1);
+}
+5% {
+    opacity: 1;
+    transform: scale(0.9);
+}
+100%
+    opacity: 1;
+    transform: scale(1);
+}
+}
+::-webkit-scrollbar{
+width: 0.5vw !important;
+
+}
+#log::-webkit-scrollbar, #box-upgrades::-webkit-scrollbar, #box-buildings::-webkit-scrollbar, #box-upgrades2::-webkit-scrollbar, #box-buildings2::-webkit-scrollbar {
+    width: 0.5vw !important;
+}
+#log::-webkit-scrollbar-thumb, #box-upgrades::-webkit-scrollbar-thumb, #box-buildings::-webkit-scrollbar-thumb, #box-upgrades2::-webkit-scrollbar-thumb, #box-buildings2::-webkit-scrollbar-thumb {
+   background: #00f6ff99 !important;
+    box-shadow: 0px 0px 0px 0px #333 inset, 0px 0px 0px 0px #999 inset, 0px 0px 0px 0px #fff inset;
+}
+#log::-webkit-scrollbar-thumb:hover, #box-upgrades::-webkit-scrollbar-thumb:hover, #box-buildings::-webkit-scrollbar-thumb:hover, #box-upgrades2::-webkit-scrollbar-thumb:hover, #box-buildings2::-webkit-scrollbar-thumb:hover {
+   background: #00f6ff !important;
+    box-shadow: 0px 0px 0px 0px #333 inset, 0px 0px 0px 0px #999 inset, 0px 0px 0px 0px #fff inset;
+}
+
+#log::-webkit-scrollbar-track, #box-upgrades::-webkit-scrollbar-track, #box-buildings::-webkit-scrollbar-track, #box-upgrades2::-webkit-scrollbar-track, #box-buildings2::-webkit-scrollbar-track {
+   background: #151504 !important;
+    box-shadow: 0px 0px 0px 0px #333 inset, 0px 0px 0px 0px #999 inset, 0px 0px 0px 0px #fff inset;
+  
+}
+
+.thing.bigButton{
+position: absolute !important;
+margin-left: -100%;
+margin-top: -30%;
+margin-right: 10%;
+
+position: absolute;
+width: 10vw;
+height: 10vw;
+top: 28vh;
+left: 23vw;
+}
+
+.thing.bigButton .thing-icon{
+
+
+background-size: contain !important;
+}
+
+.popup, #tooltip, .toast {
+    background: #151504;
+    color: #00f6ff ;
+    border-radius: 0px;
+    box-sizing: border-box;
+    padding: 8px 8px;
+ 	border: thick solid #00f6ff;
+	box-shadow: none !important;
+	text-shadow: none !important;
+
+font-weight:bold;
+}
+
+ 
+#tooltipContent{
+color: #00f6ff;
+font-weight: 100;
+ 
+font-weight:bold;
+}
+
+#tooltip .desc, .listing.b, .listing b, .desc b{
+
+color: #00f6ff;
+
+}
+#tooltip .thing-icon{
+
+}.tooltipPoint{
+border: 0px !important;
+box-shadow: none !important;
+text-shadow: none !important;
+color: #00f6ff;
+visibility: hidden;
+}
+#box-things-sortup, #box-things-sortup2, #box-things-Upgrades, #box-things-upgrades2  /*if necessary, change this to the name of the box containing your upgrades. it should start with "box-things" and you can use inspect element to find it*/
+{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center; /*you can change this to "flex-start" if you want upgrades aligned to the left*/
+	flex-direction: column-reverse;
+}
+
+#box-things-Buildings, #box-things-buildings2{
+	display:flex;
+    flex-wrap:wrap;
+    justify-content:center; /*you can change this to "flex-start" if you want upgrades aligned to the left*/
+	flex-direction: column-reverse;
+}
+
+.tag-sortup, .tag-sortup2, .building, .upgrade2.notOwned, .upgrade2.cantAfford{
+    order:3;
+}
+.upgrade.notOwned {
+    order:3;
+}
+.upgrade.owned, .upgrade2.owned
+{
+    order:1;
+}
+.achiev:hover{
+margin-right: -1px;
+border: 1px solid #00f6ff;
+color: #151504;
+background: #00f6ff;
+
+}.achiev{
+margin-right: -1px;
+border: 1px solid #00f6ff;
+color: #00f6ff;
+background: #151504;
+
+}
+
+.systemButton{
+    cursor: pointer;
+    display: inline-block;
+    font-weight: bold;
+    background: #151504;
+    box-shadow: none;
+    padding: 4px 6px;
+    margin: 2px;
+    position: relative;
+border: 1px solid #00f6ff99;
+}
+.systemButton:hover {
+    
+    background: #151504;
+    
+border: 1px solid #00f6ff;
+}
+
+.tickbox.on:before {
+    background: #00f6ff;
+	box-shadow: none;
+}
+
+.tickbox, .footerTitle{
+color: #00f6ff;
+}
+
+.tickbox:before{
+background: #151504;
+}
