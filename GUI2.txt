@@ -70,7 +70,6 @@ Buttons
 		desc:Press the button to earn Credits.
 		on click:anim icon wobble
 		on click:yield 1 credit
-		on click:yield 1 credit
 		on start:log Welcome to </#></><t>Sci-Fi Template</#> <//> Game version: 1.0</#>
 		on load:log Welcome to </#></><t>Sci-Fi Template</#> <//> Game version: 1.0</#>
 		on load:log Game loaded.
