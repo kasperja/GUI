@@ -55,7 +55,38 @@
 	margin-top:4px;
 }
 
+#box-resPa{
+width:100% !important;
+justify-content: center;
+	height:5% !important;
 
+
+}
+#box-res.fullWidth
+{	
+	display: flex !important;
+	flex-wrap: nowrap !important;
+	width:100% !important;
+	
+	
+	
+	z-index:100;
+	position:absolute;
+}
+#box-things-Resources
+{	
+	display: flex !important;
+	flex-wrap: nowrap !important;
+width:100% !important;
+justify-content: space-evenly;
+	height:5% !important;
+	
+}.tag-restop{
+float:left !important;
+	width: 40em;
+text-align: start !important;
+left: 7.5vw;
+}
 #box-main
 {
 	left:0px;
@@ -263,6 +294,7 @@ color:#ff00a8;
 }
 
 #box-buildings2, #box-upgrades2{
+
 top: 51%;
 margin-top: 32px;
 border: thick solid #ff00a8;
@@ -270,11 +302,19 @@ color:#ff00a8;
 }
 
 .building:hover, .upgrade:hover{
-
+transition: 0.2s;
 color: #001317;
 background: #ff00a8;
 
 }
+
+.building:active, .upgrade:active{
+transition: 0.3s;
+color: #ff00a8;
+background: #001317;
+
+}
+
 #bulkDisplay{
 position: absolute;
 left: 0%;
@@ -333,20 +373,20 @@ width: 100%;
 }
 
 .wobble {
-    animation: wobble 0.5s;
-    animation-duration: 0.5s;
+    animation: wobble 1.5s;
+    animation-duration: 1.5s;
     transition: transform 1.00s ease-out;
    
 }
  
 @keyframes wobble {
 0% {
-    opacity: 0.7;
+    opacity: 0.6;
     transform: scale(1);
 }
-5% {
+20% {
     opacity: 1;
-    transform: scale(0.9);
+    transform: scale(1);
 }
 100%
     opacity: 1;
@@ -415,7 +455,7 @@ font-weight: 100;
 font-weight:bold;
 }
 
-#tooltip .desc, .listing.b, .listing b, .desc b{
+#tooltip .desc, .listing.b, .listing b{
 
 color: #ff00a8;
 
@@ -450,18 +490,25 @@ visibility: hidden;
 .upgrade.notOwned {
     order:3;
 }
+.tag-zortMiddle{
+
+  order: 2;
+
+}
 .upgrade.owned, .upgrade2.owned
 {
     order:1;
 }
 .achiev:hover{
 margin-right: -1px;
+margin-top: -0.8px;
 border: 1px solid #ff00a8;
 color: #001317;
 background: #ff00a8;
 
 }.achiev{
 margin-right: -1px;
+margin-top: -0.8px;
 border: 1px solid #ff00a8;
 color: #ff00a8;
 background: #001317;
@@ -497,4 +544,30 @@ color: #ff00a8;
 
 .tickbox:before{
 background: #001317;
+}
+.res .thing-text{
+
+/*font-size: 2vh;
+padding: 1vh;
+letter-spacing: 0.1vh;*/
+}
+
+#game.filtersOn .shadowed{
+
+
+filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.0));
+
+}
+
+.thing.bigButton:hover, .thing-icon:hover {
+background-repeat: no-repeat;
+    transform: scale(1);
+    transition: transform 0.00s ease-out;
+    transition: transform 0.00s ease-in;
+	
+	
+}.thing.bigButton:hover .thing-icon{transform:scale(1);}
+
+#tooltip .thing-icon{
+display: none;
 }
